@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">KalkulatorStupar</string>
+
+    <string name="fuel_gasoline">Gasoline</string>
+    <string name="fuel_diesel">Diesel</string>
+    <string name="fuel_electric">Electric</string>
+
+    <string name="logo_content_description">App logo</string>
+    <string name="header_title">TravelCost Calculator</string>
+    <string name="header_subtitle">Enter values and calculate</string>
+    <string name="kilometers_label">Kilometers</string>
+    <string name="kilometers_hint">Enter kilometers</string>
+    <string name="liters_label">Liters</string>
+    <string name="liters_hint">Enter liters</string>
+    <string name="price_label">Price per liter (€/L)</string>
+    <string name="price_hint">Enter price</string>
+    <string name="fuel_type_label">Fuel type</string>
+    <string name="font_size_label">Font size</string>
+    <string name="calculate_button">Calculate</string>
+
+    <string-array name="fuel_types">
+        <item>@string/fuel_gasoline</item>
+        <item>@string/fuel_diesel</item>
+        <item>@string/fuel_electric</item>
+    </string-array>
+
+    <string name="error_empty_fields">Molimo unesite sve vrijednosti.</string>
+    <string name="error_invalid_values">Vrijednosti moraju biti veće od 0.</string>
+
+    <string name="results_title">Rezultat</string>
+    <string name="result_placeholder">Rezultat će se prikazati ovdje.</string>
+    <string name="result_consumption">Potrošnja</string>
+    <string name="result_total_cost">Ukupan trošak</string>
+    <string name="result_cost_100">Cijena na 100 km</string>
+
 </resources>
