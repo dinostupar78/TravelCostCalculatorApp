@@ -261,6 +261,5 @@ class MainActivity : AppCompatActivity() {
         binding.tvResultDetails.text = resultText
         binding.tvResultDetails.visibility = View.VISIBLE
 
-
     }
 }
