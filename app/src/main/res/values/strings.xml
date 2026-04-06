@@ -3,12 +3,12 @@
     <string name="app_name">KalkulatorStupar</string>
     <string name="title_main">TravelCost Calculator</string>
     <string name="subtitle_main">Enter values and calculate</string>
-    <string name="label_kilometers">Kilometers</string>
+    <string name="label_kilometers">Kilometers traveled</string>
     <string name="hint_kilometers">Enter kilometers</string>
-    <string name="label_liters">Liters</string>
+    <string name="label_liters">Used Liters</string>
     <string name="hint_liters">Enter liters</string>
-    <string name="label_price_per_liter">Price per liter (€/L)</string>
-    <string name="hint_price">Enter price</string>
+    <string name="label_price_per_liter">Fuel price (€/L)</string>
+    <string name="hint_price">Enter fuel price</string>
     <string name="label_fuel_type">Fuel type</string>
     <string name="label_font_size">Font size</string>
     <string name="btn_calculate">Calculate</string>
@@ -16,20 +16,22 @@
     <string name="font_small">Small</string>
     <string name="font_medium">Medium</string>
     <string name="font_large">Large</string>
+
     <string name="app_logo_desc">App logo</string>
     <string name="fuel_type_hint">Fuel type</string>
 
     <string name="fuel_gasoline">Gasoline</string>
     <string name="fuel_diesel">Diesel</string>
-    <string name="fuel_electric">Electric</string>
 
     <string name="result_consumption">Fuel consumption</string>
     <string name="result_total_cost">Total cost</string>
     <string name="result_cost_100">Cost per 100 km</string>
+
     <string name="menu_language">Language</string>
     <string name="menu_language_hr">Croatian</string>
     <string name="menu_language_en">English</string>
     <string name="menu_language_de">German</string>
+
     <string name="error_empty_fields">Please enter all fields</string>
     <string name="error_invalid_values">Values must be greater than 0</string>
 
@@ -37,7 +39,6 @@
         <item>@string/fuel_type_hint</item>
         <item>@string/fuel_gasoline</item>
         <item>@string/fuel_diesel</item>
-        <item>@string/fuel_electric</item>
     </string-array>
 </resources>
 

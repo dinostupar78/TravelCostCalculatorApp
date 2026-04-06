@@ -2,34 +2,37 @@
 <resources>
     <string name="app_name">KalkulatorStupar</string>
     <string name="title_main">TravelCost Kalkulator</string>
-    <string name="subtitle_main">Unesite vrijednosti i izračunajte</string>
-    <string name="label_kilometers">Kilometri</string>
-    <string name="hint_kilometers">Unesite kilometre</string>
-    <string name="label_liters">Litre</string>
-    <string name="hint_liters">Unesite litre</string>
-    <string name="label_price_per_liter">Cijena po litri (€/L)</string>
-    <string name="hint_price">Unesite cijenu</string>
+    <string name="subtitle_main">Upišite vrijednosti i izračunajte</string>
+    <string name="label_kilometers">Prijeđeni kilometri</string>
+    <string name="hint_kilometers">Upišite kilometre</string>
+    <string name="label_liters">Potrošene Litre</string>
+    <string name="hint_liters">Upišite litre</string>
+    <string name="label_price_per_liter">Cijena goriva (€/L)</string>
+    <string name="hint_price">Upišite cijenu</string>
+
     <string name="label_fuel_type">Vrsta goriva</string>
+    <string name="fuel_gasoline">Benzin</string>
+    <string name="fuel_diesel">Dizel</string>
+
     <string name="label_font_size">Veličina fonta</string>
+    <string name="font_small">Mali</string>
+    <string name="font_medium">Srednji</string>
+    <string name="font_large">Veliki</string>
     <string name="btn_calculate">Izračunaj</string>
-    <string name="font_small">Malo</string>
-    <string name="font_medium">Srednje</string>
-    <string name="font_large">Veliko</string>
     <string name="app_logo_desc">Logo aplikacije</string>
     <string name="fuel_type_hint">Vrsta goriva</string>
 
-    <string name="fuel_gasoline">Benzin</string>
-    <string name="fuel_diesel">Dizel</string>
-    <string name="fuel_electric">Električno</string>
 
     <string name="label_result">Rezultat</string>
     <string name="result_consumption">Potrošnja goriva</string>
     <string name="result_total_cost">Ukupni trošak</string>
     <string name="result_cost_100">Trošak na 100 km</string>
+
     <string name="menu_language">Jezik</string>
     <string name="menu_language_hr">Hrvatski</string>
     <string name="menu_language_en">Engleski</string>
     <string name="menu_language_de">Njemački</string>
+
     <string name="error_empty_fields">Molimo unesite sva polja</string>
     <string name="error_invalid_values">Vrijednosti moraju biti veće od 0</string>
 
@@ -37,6 +40,5 @@
         <item>@string/fuel_type_hint</item>
         <item>@string/fuel_gasoline</item>
         <item>@string/fuel_diesel</item>
-        <item>@string/fuel_electric</item>
     </string-array>
 </resources>

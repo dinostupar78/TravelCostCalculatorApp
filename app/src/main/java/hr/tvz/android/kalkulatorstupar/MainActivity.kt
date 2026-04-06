@@ -58,7 +58,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showLanguageDialog() {
-        val languages = arrayOf("Hrvatski", "English", "Deutsch")
+        val languages = arrayOf(
+            getString(R.string.menu_language_hr),
+            getString(R.string.menu_language_en),
+            getString(R.string.menu_language_de)
+        )
         val languageTags = arrayOf(LANG_HR, LANG_EN, LANG_DE)
 
         val currentLang = resources.configuration.locales[0].language
