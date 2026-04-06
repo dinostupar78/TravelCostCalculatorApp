@@ -1,36 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">KalkulatorStupar</string>
+    <string name="title_main">TravelCost Calculator</string>
+    <string name="subtitle_main">Enter values and calculate</string>
+    <string name="label_kilometers">Kilometers</string>
+    <string name="hint_kilometers">Enter kilometers</string>
+    <string name="label_liters">Liters</string>
+    <string name="hint_liters">Enter liters</string>
+    <string name="label_price_per_liter">Price per liter (€/L)</string>
+    <string name="hint_price">Enter price</string>
+    <string name="label_fuel_type">Fuel type</string>
+    <string name="label_font_size">Font size</string>
+    <string name="btn_calculate">Calculate</string>
+    <string name="label_result">Result</string>
+    <string name="font_small">Small</string>
+    <string name="font_medium">Medium</string>
+    <string name="font_large">Large</string>
+    <string name="app_logo_desc">App logo</string>
+    <string name="fuel_type_hint">Fuel type</string>
 
     <string name="fuel_gasoline">Gasoline</string>
     <string name="fuel_diesel">Diesel</string>
     <string name="fuel_electric">Electric</string>
 
-    <string name="logo_content_description">App logo</string>
-    <string name="header_title">TravelCost Calculator</string>
-    <string name="header_subtitle">Enter values and calculate</string>
-    <string name="kilometers_label">Kilometers</string>
-    <string name="kilometers_hint">Enter kilometers</string>
-    <string name="liters_label">Liters</string>
-    <string name="liters_hint">Enter liters</string>
-    <string name="price_label">Price per liter (€/L)</string>
-    <string name="price_hint">Enter price</string>
-    <string name="fuel_type_label">Fuel type</string>
-    <string name="font_size_label">Font size</string>
-    <string name="calculate_button">Calculate</string>
+    <string name="result_consumption">Fuel consumption</string>
+    <string name="result_total_cost">Total cost</string>
+    <string name="result_cost_100">Cost per 100 km</string>
+    <string name="menu_language">Language</string>
+    <string name="menu_language_hr">Croatian</string>
+    <string name="menu_language_en">English</string>
+    <string name="menu_language_de">German</string>
+    <string name="error_empty_fields">Please enter all fields</string>
+    <string name="error_invalid_values">Values must be greater than 0</string>
 
     <string-array name="fuel_types">
+        <item>@string/fuel_type_hint</item>
         <item>@string/fuel_gasoline</item>
         <item>@string/fuel_diesel</item>
         <item>@string/fuel_electric</item>
     </string-array>
-
-    <string name="error_empty_fields">Molimo unesite sve vrijednosti.</string>
-    <string name="error_invalid_values">Vrijednosti moraju biti veće od 0.</string>
-
-    <string name="results_title">Rezultat</string>
-    <string name="result_placeholder">Rezultat će se prikazati ovdje.</string>
-    <string name="result_consumption">Potrošnja</string>
-    <string name="result_total_cost">Ukupan trošak</string>
-    <string name="result_cost_100">Cijena na 100 km</string>
-
 </resources>
+

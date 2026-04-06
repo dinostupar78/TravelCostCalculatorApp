@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -20,49 +21,70 @@
             app:cardCornerRadius="0dp"
             app:cardElevation="0dp">
 
-            <LinearLayout
-                android:layout_width="432dp"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <ImageView
-                    android:id="@+id/ivLogo"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginEnd="12dp"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="App logo"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/logo" />
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:contentInsetEnd="56dp"
+                app:contentInsetStart="0dp"
+                app:subtitle=""
+                app:title="">
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_gravity="start|center_vertical"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="10dp">
 
-                    <TextView
-                        android:id="@+id/tvTitle"
+                    <ImageView
+                        android:id="@+id/ivLogo"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="top"
+                        android:layout_marginEnd="8dp"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_logo_desc"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo" />
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="TravelCost Calculator"
-                        android:textColor="@android:color/white"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
+                        android:layout_gravity="top"
+                        android:layout_marginTop="6dp"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/tvSubtitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Enter values and calculate"
-                        android:textColor="#E3F2FD"
-                        android:textSize="12sp" />
+                            <TextView
+                                android:id="@+id/tvTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_main"
+                                android:textColor="@android:color/white"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvSubtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/subtitle_main"
+                                android:textColor="#E3F2FD"
+                                android:textSize="12sp" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
-            </LinearLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -70,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_margin="16dp"
+            android:layout_margin="13dp"
             app:cardCornerRadius="20dp"
             app:cardBackgroundColor="@color/cardWhite"
             app:cardElevation="6dp">
@@ -82,9 +104,12 @@
                 android:padding="20dp">
 
                 <TextView
+                    android:id="@+id/tvKilometersLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Result"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/label_kilometers"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@color/primaryBlue"/>
@@ -92,118 +117,225 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/cardWhite"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/primaryBlue"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:hintTextColor="@color/textGray">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etKilometers"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="43dp"
                         android:minHeight="56dp"
                         android:gravity="center_vertical"
                         android:paddingTop="12dp"
                         android:paddingBottom="12dp"
-                        android:hint="Enter kilometers"
+                        android:hint="@string/hint_kilometers"
                         android:textColor="@color/textDark"
                         android:textColorHint="@color/textGray"
                         android:inputType="numberDecimal" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
+                    android:id="@+id/tvLitersLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Liters"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/label_liters"
+                    android:textColor="@color/primaryBlue"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/cardWhite"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/primaryBlue"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:hintTextColor="@color/textGray">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etLiters"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="43dp"
                         android:minHeight="56dp"
                         android:gravity="center_vertical"
                         android:paddingTop="12dp"
                         android:paddingBottom="12dp"
-                        android:hint="Enter liters"
+                        android:hint="@string/hint_liters"
                         android:textColor="@color/textDark"
                         android:textColorHint="@color/textGray"
                         android:inputType="numberDecimal" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
+                    android:id="@+id/tvPriceLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Price per liter (€/L)"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/label_price_per_liter"
+                    android:textColor="@color/primaryBlue"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/cardWhite"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/primaryBlue"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:hintTextColor="@color/textGray">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etPrice"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
+                        android:layout_height="43dp"
                         android:minHeight="56dp"
                         android:gravity="center_vertical"
                         android:paddingTop="12dp"
                         android:paddingBottom="12dp"
-                        android:hint="Enter price"
+                        android:hint="@string/hint_price"
                         android:textColor="@color/textDark"
                         android:textColorHint="@color/textGray"
                         android:inputType="numberDecimal" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
+                    android:id="@+id/tvFuelTypeLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
-                    android:text="Fuel type"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/label_fuel_type"
+                    android:textColor="@color/primaryBlue"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <Spinner
                     android:id="@+id/spinnerFuelType"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp" />
+                    android:layout_height="43dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/spinner_bg"
+                    android:dropDownVerticalOffset="6dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="44dp"
+                    android:spinnerMode="dropdown"
+                    tools:entries="@array/fuel_types" />
 
                 <TextView
                     android:id="@+id/tvFontLabel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="Font size"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="0dp"
+                    android:text="@string/label_font_size"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/primaryBlue" />
 
-                <SeekBar
-                    android:id="@+id/seekBarFont"
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="#E2E7EE" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/sliderFont"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:max="2"
-                    android:progress="1" />
+                    android:stepSize="1"
+                    android:value="1"
+                    android:valueFrom="0"
+                    android:valueTo="2"
+                    app:haloRadius="0dp"
+                    app:labelBehavior="gone"
+                    app:thumbColor="@color/primaryBlue"
+                    app:thumbRadius="11dp"
+                    app:tickColorActive="@color/primaryBlue"
+                    app:tickColorInactive="#BFC7D3"
+                    app:tickVisible="true"
+                    app:trackColorActive="@color/primaryBlue"
+                    app:trackColorInactive="#C8D0DB"
+                    app:trackHeight="4dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvFontSmall"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/font_small"
+                        android:textColor="@color/textDark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvFontMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/font_medium"
+                        android:textColor="@color/textDark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvFontLarge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/font_large"
+                        android:textColor="@color/textDark"
+                        android:textSize="16sp" />
+                </LinearLayout>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnCalculate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:text="Calculate"
+                    android:text="@string/btn_calculate"
                     android:textStyle="bold"
+                    android:textSize="18sp"
                     android:textColor="@android:color/white"
                     android:textAllCaps="false"
                     app:backgroundTint="@color/primaryBlue"
-                    app:cornerRadius="0dp" />
+                    app:cornerRadius="5dp" />
 
             </LinearLayout>
 
@@ -215,53 +347,44 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/cardWhite"
             app:cardCornerRadius="20dp"
-            app:cardElevation="6dp">
+            app:cardElevation="6dp"
+            app:strokeColor="@color/strokeGray"
+            app:strokeWidth="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:background="@color/cardWhite"
-                android:padding="20dp">
+                android:orientation="vertical"
+                android:padding="28dp">
 
-                <ImageView
-                    android:id="@+id/ivResultIcon"
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:layout_marginEnd="16dp"
-                    android:adjustViewBounds="true"
-                    android:contentDescription="@string/results_title"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/logo"
+                <TextView
+                    android:id="@+id/tvResultTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_result"
+                    android:textColor="@color/primaryBlueDark"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvResultDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:lineSpacingExtra="6dp"
+                    android:longClickable="false"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:textIsSelectable="false"
+                    android:textColor="@color/textDark"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
                     android:visibility="gone" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tvResultTitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/results_title"
-                        android:textColor="@color/textDark"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvResultDetails"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:textColor="@color/textDark"
-                        android:textSize="16sp"
-                        android:visibility="gone" />
-
-                </LinearLayout>
 
             </LinearLayout>
 

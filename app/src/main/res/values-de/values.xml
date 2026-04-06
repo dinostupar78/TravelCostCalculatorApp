@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KalkulatorStupar</string>
+    <string name="title_main">TravelCost-Rechner</string>
+    <string name="subtitle_main">Werte eingeben und berechnen</string>
+    <string name="label_kilometers">Kilometer</string>
+    <string name="hint_kilometers">Kilometer eingeben</string>
+    <string name="label_liters">Liter</string>
+    <string name="hint_liters">Liter eingeben</string>
+    <string name="label_price_per_liter">Preis pro Liter (€/L)</string>
+    <string name="hint_price">Preis eingeben</string>
+    <string name="label_fuel_type">Kraftstoffart</string>
+    <string name="label_font_size">Schriftgröße</string>
+    <string name="btn_calculate">Berechnen</string>
+    <string name="font_small">Klein</string>
+    <string name="font_medium">Medium</string>
+    <string name="font_large">groß</string>
+    <string name="app_logo_desc">App-Logo</string>
+    <string name="fuel_type_hint">Kraftstoffart</string>
+
+    <string name="fuel_gasoline">Benzin</string>
+    <string name="fuel_diesel">Diesel</string>
+    <string name="fuel_electric">Elektrisch</string>
+
+    <string name="label_result">Ergebnis</string>
+    <string name="result_consumption">Kraftstoffverbrauch</string>
+    <string name="result_total_cost">Gesamtkosten</string>
+    <string name="result_cost_100">Kosten pro 100 km</string>
+    <string name="menu_language">Sprache</string>
+    <string name="menu_language_hr">Kroatisch</string>
+    <string name="menu_language_en">Englisch</string>
+    <string name="menu_language_de">Deutsch</string>
+    <string name="error_empty_fields">Bitte füllen Sie alle Felder aus</string>
+    <string name="error_invalid_values">Die Werte müssen größer als 0 sein</string>
+
+    <string-array name="fuel_types">
+        <item>@string/fuel_type_hint</item>
+        <item>@string/fuel_gasoline</item>
+        <item>@string/fuel_diesel</item>
+        <item>@string/fuel_electric</item>
+    </string-array>
+</resources>
