@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.core.os.LocaleListCompat
 import hr.tvz.android.kalkulatorstupar.databinding.ActivityMainBinding
-import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
@@ -253,13 +252,11 @@ class MainActivity : AppCompatActivity() {
         val totalCost = liters * pricePerLiter
         val costPer100km = (totalCost / kilometers) * 100
 
-        val resultText = String.format(
-            Locale.getDefault(),
-            "%s: %.2f L / 100 km\n%s: %.2f EUR\n%s: %.2f EUR / 100 km",
-            getString(R.string.result_consumption), fuelConsumption,
-            getString(R.string.result_total_cost), totalCost,
-            getString(R.string.result_cost_100), costPer100km
-        )
+        val resultText = listOf(
+            getString(R.string.result_line_consumption, fuelConsumption),
+            getString(R.string.result_line_total_cost, totalCost),
+            getString(R.string.result_line_cost_100, costPer100km)
+        ).joinToString("\n")
 
         binding.tvResultDetails.text = resultText
         binding.tvResultDetails.visibility = View.VISIBLE

@@ -26,6 +26,9 @@
     <string name="result_consumption">Fuel consumption</string>
     <string name="result_total_cost">Total cost</string>
     <string name="result_cost_100">Cost per 100 km</string>
+    <string name="result_line_consumption">Fuel consumption: %1$.2f L / 100 km</string>
+    <string name="result_line_total_cost">Total cost: %1$.2f EUR</string>
+    <string name="result_line_cost_100">Cost per 100 km: %1$.2f EUR / 100 km</string>
 
     <string name="menu_language">Language</string>
     <string name="menu_language_hr">Croatian</string>

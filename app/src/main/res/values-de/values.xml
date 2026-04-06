@@ -26,6 +26,9 @@
     <string name="result_consumption">Kraftstoffverbrauch</string>
     <string name="result_total_cost">Gesamtkosten</string>
     <string name="result_cost_100">Kosten pro 100 km</string>
+    <string name="result_line_consumption">Kraftstoffverbrauch: %1$.2f L / 100 km</string>
+    <string name="result_line_total_cost">Gesamtkosten: %1$.2f EUR</string>
+    <string name="result_line_cost_100">Kosten pro 100 km: %1$.2f EUR / 100 km</string>
 
     <string name="menu_language">Sprache</string>
     <string name="menu_language_hr">Kroatisch</string>

@@ -27,6 +27,9 @@
     <string name="result_consumption">Potrošnja goriva</string>
     <string name="result_total_cost">Ukupni trošak</string>
     <string name="result_cost_100">Trošak na 100 km</string>
+    <string name="result_line_consumption">Potrošnja goriva: %1$.2f L / 100 km</string>
+    <string name="result_line_total_cost">Ukupni trošak: %1$.2f EUR</string>
+    <string name="result_line_cost_100">Trošak na 100 km: %1$.2f EUR / 100 km</string>
 
     <string name="menu_language">Jezik</string>
     <string name="menu_language_hr">Hrvatski</string>
