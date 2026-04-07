@@ -8,7 +8,7 @@ The user enters distance, fuel, and price to calculate fuel consumption and trip
 
 ## ▶️ Demo
 
-👉 [YouTube Link](https://youtu.be/your-demo-link)
+👉 [YouTube Link](https://youtu.be/WZlBtwWZ7-I)
 
 ---
 
@@ -49,7 +49,7 @@ The app is organized on a single screen:
 
 Supported languages:
 - Croatian (`values-hr`)
-- English (`values`)
+- English (`values-en`)
 - German (`values-de`)
 
 You can change the language from the toolbar overflow menu:
